@@ -23,7 +23,7 @@ export class Article {
     @Column('text')
     content!: string; // Article content
 
-    @Column('simple-array', { array: true, nullable: true })
+    @Column('simple-array', { nullable: true })
     images?: string[]; // Optional array of image paths
 
     @CreateDateColumn()

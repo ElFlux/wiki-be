@@ -152,6 +152,9 @@ export class ArticlesService {
         if (data.title !== undefined) article.title = data.title;
         if (data.content !== undefined) article.content = data.content;
 
+        article.updatedBy = user;
+        article.updated_at = new Date();
+
         return this.articleRepo.save(article);
     }
 }
